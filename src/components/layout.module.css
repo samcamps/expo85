@@ -13,7 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: whitesmoke;
-  font-family:  sans-serif, georgia, serif;
+  font-family: sans-serif, georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -28,12 +28,10 @@ body {
   max-width: 1080px;
   margin: auto;
   font-family: optima, sans-serif;
-
 }
 
 .nav {
   display: flex;
-
 }
 
 .nav-links {
@@ -60,8 +58,7 @@ body {
 
 .nav-link-text:hover {
   color: #165578;
- text-decoration-line: underline;
-
+  text-decoration-line: underline;
 }
 
 .site-title {
