@@ -24,7 +24,7 @@ const ArtworkPage = ({
                 <div dangerouslySetInnerHTML={{ __html: el.description }} />
                 <p>Year: {el.year}</p>
                 <p>Type: {el.type}</p>
-                <p>Signed: {el.signed}</p>
+                { el.signed && <p>Gesigneerd</p>}
                 <GatsbyImage image={image} alt={el.picture.altText} />
 
 

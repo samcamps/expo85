@@ -1,26 +1,33 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 const ArtworksPage = ({
   data: {
     allWpArtwork: {
       edges
-      
+
     }
   }
 }) => {
-console.log(edges)
+
   return (
+
     <Layout >
       {edges.map((item) => {
+
         const artwork = item.node.artworkMeta;
-        return <p key={item.node.id}>{artwork.title} ({artwork.artist})</p>
+        const slug = item.node.slug;
+        
+        return <Link to={`/artworks/${slug}`}>
+          <p key={item.node.id}>{artwork.title} ({artwork.artist})</p>
+        </Link>
+
       })}
+
     </Layout>
   )
 }
-
 
 export default ArtworksPage;
 
@@ -29,6 +36,7 @@ query {
   allWpArtwork {
     edges {
       node {
+        slug
         artworkMeta {
           artist
           title
