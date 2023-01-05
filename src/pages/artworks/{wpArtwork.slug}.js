@@ -19,10 +19,10 @@ const ArtworkPage = ({
 
         <Layout >
             <div>
-                <h1>{el.title}</h1>
+                <h2>{el.title},  {el.year} </h2>
                 <h3>{el.artist}</h3>
                 <div dangerouslySetInnerHTML={{ __html: el.description }} />
-                <p>Year: {el.year}</p>
+                <p>Afmetingen: {el.dimensions}</p>
                 <p>Type: {el.type}</p>
                 { el.signed && <p>Gesigneerd</p>}
                 <GatsbyImage image={image} alt={el.picture.altText} />
@@ -49,6 +49,7 @@ export const query = graphql`
         title
         type
         year
+        dimensions
         picture {
           altText
           localFile {

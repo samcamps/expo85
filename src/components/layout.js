@@ -29,7 +29,10 @@ const Layout = ({ children }) => {
 
       <nav className={nav}>
 
-        <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+        <header className={siteTitle}>
+          <Link to={'/'} className={navLinkText}>{data.site.siteMetadata.title}
+          </Link>
+        </header>
 
         <ul className={navLinks}>
 
