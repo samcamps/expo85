@@ -6,6 +6,7 @@ const ArtworksPage = ({
   data: {
     allWpArtwork: {
       edges
+      
     }
   }
 }) => {
