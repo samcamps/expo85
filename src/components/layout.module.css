@@ -4,7 +4,7 @@ html {
   font: 112.5%/1.45em optima, sans-serif, georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
-  background-color: rgba(0,0,0, 0.70);
+  background-color:dimgrey;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: whitesmoke;
-  font-family: sans-serif, georgia, serif;
+  font-family: optima , sans-serif, georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -28,6 +28,7 @@ body {
   max-width: 1080px;
   margin: auto;
   font-family: optima, sans-serif;
+
 }
 
 .nav {
@@ -48,7 +49,7 @@ body {
 }
 
 .nav-link-text {
-  color: white;
+  color: whitesmoke;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
@@ -57,8 +58,8 @@ body {
 }
 
 .nav-link-text:hover {
-  color:whitesmoke;
-  text-shadow: 1px 1px 5px blueviolet
+
+  text-shadow: 1px 1px 5px darkviolet
 }
 
 .site-title {
