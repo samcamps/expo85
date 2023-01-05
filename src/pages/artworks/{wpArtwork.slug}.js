@@ -8,10 +8,14 @@ import Layout from '../../components/layout'
 const ArtworkPage = ({
     data: {
         wpArtwork: {
-            artworkMeta: el
+            artworkMeta: el,
+            provenances: {
+                nodes
+            }
         }
     }
 }) => {
+    console.log(nodes)
 
     const image = getImage(el.picture.localFile)
 
@@ -24,7 +28,15 @@ const ArtworkPage = ({
                 <div dangerouslySetInnerHTML={{ __html: el.description }} />
                 <p>Afmetingen: {el.dimensions}</p>
                 <p>Type: {el.type}</p>
-                { el.signed && <p>Gesigneerd</p>}
+                {el.signed && <p>Gesigneerd</p>}
+
+                <div><p>Provenance: 
+                    {nodes.map((el, index) => (
+                        <span key={index}>
+                           {" "} {el.name} {index + 1 < nodes.length && "- "}
+                        </span>
+                    ))}
+                </p></div>
                 <GatsbyImage image={image} alt={el.picture.altText} />
 
 
@@ -40,24 +52,29 @@ export default ArtworkPage
 export const query = graphql`
 
  query ($id: String) {
-    wpArtwork(id: {eq: $id}) {
-      artworkMeta {
-        artist
-        description
-        signed
-        title
-        type
-        year
-        dimensions
-        picture {
-          altText
-          localFile {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED)
-            }
+wpArtwork(id: {eq: $id}) {
+    artworkMeta {
+      artist
+      description
+      signed
+      title
+      type
+      year
+      dimensions
+      picture {
+        altText
+        localFile {
+          childImageSharp {
+            gatsbyImageData(placeholder: DOMINANT_COLOR)
           }
         }
       }
     }
+    provenances {
+      nodes {
+        name
+      }
+    }
   }
-  `
+}
+`

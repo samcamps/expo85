@@ -34,7 +34,7 @@ const IndexPage = ({
 
       <section >
 
-        <h2 className={featured}>Featured works</h2>
+        <h2 className={featured}>Featured artworks</h2>
         <hr></hr>
 
         <div className={artTiles}>
