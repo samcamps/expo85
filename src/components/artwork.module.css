@@ -3,20 +3,22 @@
     height: auto;
     max-width: 350px;
     text-decoration: none;
-    color:whitesmoke;
-    font-weight: 600 ;
- 
+    color: whitesmoke;
+  
 }
 
 .wrapper p {
     text-align: center;
-    font-size: 0.90rem;
+    font-size: 0.95rem;
     margin: 10px 0px;
-   
-   
+
+
 }
 
 .wrapper:hover p {
     text-shadow: 1px 1px 5px blueviolet
-    
+}
+
+.foto {
+    border-radius: 9px;
 }
