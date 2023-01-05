@@ -2,5 +2,21 @@
     width: 30%;
     height: auto;
     max-width: 350px;
+    text-decoration: none;
+    color:whitesmoke;
+    font-weight: 600 ;
  
+}
+
+.wrapper p {
+    text-align: center;
+    font-size: 0.90rem;
+    margin: 10px 0px;
+   
+   
+}
+
+.wrapper:hover p {
+    text-shadow: 1px 1px 5px blueviolet
+    
 }

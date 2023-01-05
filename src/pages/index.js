@@ -5,7 +5,8 @@ import Layout from '../components/layout'
 import Artwork from '../components/artwork'
 import {
   featured,
-  artTiles
+  artTiles,
+  homeHero
 } from './pages.module.css'
 
 const IndexPage = ({
@@ -26,7 +27,7 @@ const IndexPage = ({
 
         <div dangerouslySetInnerHTML={{ __html: homePage.description }} />
 
-        <GatsbyImage image={image} alt={homePage.picture.altText} />
+        <GatsbyImage className={homeHero} image={image} alt={homePage.picture.altText} />
       </section>
 
       <section >
@@ -56,7 +57,7 @@ query  {
       picture {
         localFile {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, transformOptions: {grayscale: true})
+            gatsbyImageData(placeholder: BLURRED, transformOptions: {grayscale: true}, layout: FULL_WIDTH)
           }
         }
         altText
