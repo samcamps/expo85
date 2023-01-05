@@ -3,6 +3,10 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Artwork from '../components/artwork'
+import {
+  featured,
+  artTiles
+} from './pages.module.css'
 
 const IndexPage = ({
   data: {
@@ -25,12 +29,14 @@ const IndexPage = ({
         <GatsbyImage image={image} alt={homePage.picture.altText} />
       </section>
 
-      <section>
-        <h2>Featured works</h2>
-        {homePage.artwork.map(artwork => {
+      <section >
+        <h2 className={featured}>Featured works</h2>
+
+        <div className={artTiles}>{homePage.artwork.map(artwork => {
 
           return <Artwork key={artwork.id} slug={`artworks/${artwork.slug}`} artwork={artwork} />
         })}
+        </div>
       </section>
 
     </Layout>
