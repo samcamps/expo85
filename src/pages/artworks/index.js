@@ -1,16 +1,48 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
+import { graphql } from 'gatsby'
 
-const ArtworksPage = () => {
-
+const ArtworksPage = ({
+  data: {
+    allWpArtwork: {
+      edges
+    }
+  }
+}) => {
+console.log(edges)
   return (
-    <Layout>
-      
-      <h1>lijst van alle kunstwerken</h1>
-      <p>Lorem ipsum</p>
+    <Layout >
+      {edges.map((item) => {
+        const artwork = item.node.artworkMeta;
+        return <p key={item.node.id}>{artwork.title} ({artwork.artist})</p>
+      })}
     </Layout>
   )
 }
 
 
 export default ArtworksPage;
+
+export const query = graphql`
+query {
+  allWpArtwork {
+    edges {
+      node {
+        artworkMeta {
+          artist
+          title
+          picture {
+            altText
+            localFile {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+          }
+        }
+        id
+      }
+    }
+  }
+}
+`
