@@ -1,55 +1,88 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
 import { graphql, Link } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import Artwork from '../../components/artwork'
 
 const ArtworksPage = ({
   data: {
     allWpArtwork: {
       edges
-
+    },
+    wpPage: {
+      artworksPage
     }
   }
-}) => {
+}
+) => {
+
+  const image = getImage(artworksPage.picture.localFile)
+  console.log(edges)
 
   return (
 
-    <Layout >
-      {edges.map((item) => {
+    <Layout>
 
-        const artwork = item.node.artworkMeta;
-        const slug = item.node.slug;
-        
-        return <Link to={`/artworks/${slug}`}>
-          <p key={item.node.id}>{artwork.title} ({artwork.artist})</p>
-        </Link>
+      <section>
+        <h2>{artworksPage.title}</h2>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: artworksPage.description,
+          }}
+        />
+        <GatsbyImage
+          image={image}
+          alt={artworksPage.picture.altText}
+        />
+        <div>
 
-      })}
+          {edges.map((el) => (
+            <Artwork key={el.node.id} slug={el.node.slug} artwork={el.node} />
+          ))}
+        </div>
 
-    </Layout>
+      </section>
+    </Layout >
   )
 }
+
+
 
 export default ArtworksPage;
 
 export const query = graphql`
-query {
+query  {
+  wpPage(slug: {eq: "artworks"}) {
+    artworksPage {
+      title
+      description
+      picture {
+        altText
+        localFile {
+          childImageSharp {
+            gatsbyImageData(placeholder: DOMINANT_COLOR)
+          }
+        }
+      }
+    }
+  }
   allWpArtwork {
     edges {
       node {
+        id
         slug
         artworkMeta {
-          artist
           title
+          artist
           picture {
             altText
             localFile {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
+                gatsbyImageData(placeholder: DOMINANT_COLOR)
               }
             }
           }
         }
-        id
       }
     }
   }
