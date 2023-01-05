@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Artwork from '../components/artwork'
 import {
+  title,
   featured,
   artTiles,
   homeHero
@@ -23,7 +24,8 @@ const IndexPage = ({
     <Layout>
       <section>
 
-        <h1>{homePage.title}</h1>
+        <h1 className={title}>{homePage.title}</h1>
+        <hr></hr>
 
         <div dangerouslySetInnerHTML={{ __html: homePage.description }} />
 

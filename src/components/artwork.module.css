@@ -4,12 +4,14 @@
     max-width: 350px;
     text-decoration: none;
     color: whitesmoke;
+    text-transform:uppercase;
+  
   
 }
 
 .wrapper p {
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     margin: 10px 0px;
 
 

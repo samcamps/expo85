@@ -1,7 +1,15 @@
+.title{
+    text-align: center;
+    font-weight: lighter;
+    text-transform:uppercase;
+    margin-bottom: 25px;
+    font-size: 1.32rem;
+}
 .homeHero {
     max-height: 350px;
     width: auto;
     height: auto;
+    border-radius: 8px;
 }
 
 .featured {
@@ -9,6 +17,7 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: lighter;
+    font-size: 1.32rem;
 }
 
 hr {
