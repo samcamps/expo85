@@ -1,20 +1,16 @@
 .wrapper {
-    width: 30%;
+    width: 27%;
     height: auto;
     max-width: 350px;
     text-decoration: none;
     color: whitesmoke;
-    text-transform:uppercase;
-  
-  
+    text-transform: uppercase;
 }
 
 .wrapper p {
     text-align: center;
     font-size: 0.85rem;
     margin: 10px 0px;
-
-
 }
 
 .wrapper:hover p {

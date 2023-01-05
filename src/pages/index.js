@@ -37,10 +37,12 @@ const IndexPage = ({
         <h2 className={featured}>Featured works</h2>
         <hr></hr>
 
-        <div className={artTiles}>{homePage.artwork.map(artwork => {
+        <div className={artTiles}>
 
-          return <Artwork key={artwork.id} slug={`artworks/${artwork.slug}`} artwork={artwork} />
-        })}
+          {homePage.artwork.map(artwork => {
+            return <Artwork key={artwork.id} slug={`artworks/${artwork.slug}`} artwork={artwork} />
+
+          })}
         </div>
       </section>
 

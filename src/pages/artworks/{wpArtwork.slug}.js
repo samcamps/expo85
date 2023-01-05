@@ -37,7 +37,6 @@ const ArtworkPage = ({
 
 export default ArtworkPage
 
-
 export const query = graphql`
 
  query ($id: String) {

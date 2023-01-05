@@ -1,8 +1,15 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Artwork from '../../components/artwork'
+import {
+  title,
+  featured,
+  artTiles,
+  artTilesOverview,
+  homeHero
+} from '../pages.module.css'
 
 const ArtworksPage = ({
   data: {
@@ -31,10 +38,12 @@ const ArtworksPage = ({
           }}
         />
         <GatsbyImage
+          className={homeHero}
           image={image}
           alt={artworksPage.picture.altText}
         />
-        <div>
+        <hr></hr>
+        <div className={artTilesOverview}>
 
           {edges.map((el) => (
             <Artwork key={el.node.id} slug={el.node.slug} artwork={el.node} />
@@ -46,9 +55,8 @@ const ArtworksPage = ({
   )
 }
 
-
-
 export default ArtworksPage;
+
 
 export const query = graphql`
 query  {
@@ -60,7 +68,7 @@ query  {
         altText
         localFile {
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR)
+            gatsbyImageData(placeholder: DOMINANT_COLOR,layout: FULL_WIDTH)
           }
         }
       }

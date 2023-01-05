@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import{
+import {
     wrapper,
     foto
 } from './artwork.module.css'
@@ -16,7 +16,8 @@ const Artwork = ({ artwork, slug }) => {
 
             <article>
                 <p>{artwork.artworkMeta.title} ({artwork.artworkMeta.artist})</p>
-                <GatsbyImage className={foto}
+                <GatsbyImage
+                    className={foto}
                     image={image}
                     alt={artwork.artworkMeta.picture.altText}
                 />
