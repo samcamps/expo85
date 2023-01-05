@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
+import Artwork from '../components/artwork'
 
 const IndexPage = ({
   data: {
@@ -15,12 +16,22 @@ const IndexPage = ({
 
   return (
     <Layout>
+      <section>
 
-      <h1>{homePage.title}</h1>
+        <h1>{homePage.title}</h1>
 
-      <div dangerouslySetInnerHTML={{ __html: homePage.description }} />
+        <div dangerouslySetInnerHTML={{ __html: homePage.description }} />
 
-      <GatsbyImage image={image} alt={homePage.picture.altText} />
+        <GatsbyImage image={image} alt={homePage.picture.altText} />
+      </section>
+
+      <section>
+        <h2>Featured works</h2>
+        {homePage.artwork.map(artwork => {
+
+          return <Artwork key={artwork.id} slug={`artworks/${artwork.slug}`} artwork={artwork} />
+        })}
+      </section>
 
     </Layout>
   )
@@ -39,10 +50,28 @@ query  {
       picture {
         localFile {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED,transformOptions: {grayscale: true})
+            gatsbyImageData(placeholder: BLURRED, transformOptions: {grayscale: true})
           }
         }
         altText
+      }
+      artwork {
+        ... on WpArtwork {
+          id
+          slug
+          artworkMeta {
+            artist
+            title
+            picture {
+              altText
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED)
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
