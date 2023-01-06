@@ -8,7 +8,7 @@ import {
   featured,
   artTiles,
   artTilesOverview,
-  homeHero
+  overviewHero
 } from '../pages.module.css'
 
 const ArtworksPage = ({
@@ -31,14 +31,15 @@ const ArtworksPage = ({
     <Layout>
 
       <section>
-        <h2>{artworksPage.title}</h2>
+        <h1 className={title}>{artworksPage.title}</h1>
+        <hr></hr>
         <div
           dangerouslySetInnerHTML={{
             __html: artworksPage.description,
           }}
         />
         <GatsbyImage
-          className={homeHero}
+          className={overviewHero}
           image={image}
           alt={artworksPage.picture.altText}
         />

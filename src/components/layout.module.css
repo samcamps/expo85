@@ -4,7 +4,7 @@ html {
   font: 112.5%/1.45em optima, sans-serif, georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
-  background-color:dimgrey;
+  background-color: dimgrey;
 }
 
 body {
@@ -21,6 +21,10 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+p {
+  margin-top: 0;
 }
 
 .container {
@@ -54,8 +58,6 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.1s ease;
-
 }
 
 .nav-link-text:hover {
@@ -74,4 +76,3 @@ body {
   font-weight: 600;
   margin-right: auto;
 }
-

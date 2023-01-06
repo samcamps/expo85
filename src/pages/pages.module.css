@@ -6,14 +6,21 @@
     font-size: 1.32rem;
 }
 .homeHero {
-    max-height: 350px;
+    max-height: 305px;
     width: auto;
     height: auto;
-    border-radius: 8px;
+    border-radius: 7px;
+}
+.overviewHero {
+    max-height: 305px;
+    width: auto;
+    height: auto;
+    border-radius: 7px;
+    margin-bottom: 2.5rem;
 }
 
 .featured {
-    margin: 90px 0px 25px;
+    margin: 75px 0px 25px;
     text-align: center;
     text-transform: uppercase;
     font-weight: lighter;
@@ -22,8 +29,7 @@
 
 hr {
 
-    margin-bottom: 3.2rem;
-    height: 0.5px;
+    margin-bottom: 3.5rem;
     background-color: whitesmoke
 }
 
