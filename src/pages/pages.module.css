@@ -1,16 +1,18 @@
-.title{
+.title {
     text-align: center;
     font-weight: lighter;
-    text-transform:uppercase;
+    text-transform: uppercase;
     margin-bottom: 25px;
     font-size: 1.32rem;
 }
+
 .homeHero {
     max-height: 305px;
     width: auto;
     height: auto;
     border-radius: 7px;
 }
+
 .overviewHero {
     max-height: 305px;
     width: auto;
@@ -43,5 +45,37 @@ hr {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap:3rem
+    gap: 3rem
 }
+
+.description p {
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.properties p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    text-align:left
+    
+}
+
+.pictureContainer{
+    display:flex;
+    justify-content: center;
+    margin: 50px 50px 60px
+}
+
+.artHero {
+    max-width: 800px;
+    width: auto;
+    height: auto;
+
+}
+
+.artistName{
+    margin-top: 0px;
+}
+
