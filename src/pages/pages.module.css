@@ -45,7 +45,8 @@ hr {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 3rem
+    gap: 3rem;
+    margin-bottom:45px
 }
 
 .description p {
@@ -56,16 +57,16 @@ hr {
 .properties p {
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-left: 10px;
-    font-size: 0.8rem;
-    text-align:left
-    
+    margin-left: 8px;
+    font-size: 0.875rem;
+    text-align:left;
+
 }
 
 .pictureContainer{
     display:flex;
     justify-content: center;
-    margin: 50px 50px 60px
+    margin: 50px 50px 65px
 }
 
 .artHero {

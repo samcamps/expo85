@@ -50,6 +50,7 @@ const ArtworksPage = ({
             <Artwork key={el.node.id} slug={el.node.slug} artwork={el.node} />
           ))}
         </div>
+        <hr></hr>
 
       </section>
     </Layout >
