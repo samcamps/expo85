@@ -38,6 +38,7 @@ hr {
 .art-tiles {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 45px;
 
 }
 

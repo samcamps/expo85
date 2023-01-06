@@ -7,6 +7,7 @@ import {
   navLinkItem,
   navLinkText,
   siteTitle,
+  footer
 } from "./layout.module.css"
 
 const Layout = ({ children }) => {
@@ -49,6 +50,7 @@ const Layout = ({ children }) => {
       </nav>
 
       <main>{children}</main>
+      <footer className={footer}><p>&copy; Sam Camps</p></footer>
 
     </div>
   )

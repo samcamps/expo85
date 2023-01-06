@@ -45,6 +45,7 @@ const IndexPage = ({
           })}
         </div>
       </section>
+      <hr></hr>
 
     </Layout>
   )
