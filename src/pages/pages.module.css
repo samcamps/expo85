@@ -31,7 +31,7 @@
 
 hr {
 
-    margin-bottom: 3.5rem;
+    margin-bottom: 3.45rem;
     background-color: whitesmoke
 }
 
@@ -47,27 +47,30 @@ hr {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 3rem;
-    margin-bottom:45px
+    margin-bottom: 45px
 }
 
 .description p {
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
+
+
 .properties {
-    margin-bottom:25px;
+    margin-bottom: 25px;
 }
+
 .properties p {
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 8px;
     font-size: 0.9rem;
-    text-align:left;
+    text-align: left;
 
 }
 
-.pictureContainer{
-    display:flex;
+.pictureContainer {
+    display: flex;
     justify-content: center;
     margin: 50px 50px 65px
 }
@@ -79,7 +82,6 @@ hr {
 
 }
 
-.artistName{
+.artistName {
     margin-top: 0px;
 }
-
