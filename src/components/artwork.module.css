@@ -11,12 +11,14 @@
     text-align: center;
     font-size: 0.87rem;
     margin: 10px 0px;
+    border: 1px solid grey;
+    
 }
 
 .wrapper:hover p {
-    text-shadow: 1px 1px 5px blueviolet
+   box-shadow: 1px 1px  rgba(245, 245, 245, 0.6) 
 }
 
 .foto {
-    border-radius: 9px;
+    border-radius: 8px;
 }
