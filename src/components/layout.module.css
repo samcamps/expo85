@@ -55,7 +55,7 @@ p {
 }
 
 .nav-link-item {
-  padding: 0 10px
+  padding: 0px 8px
 }
 
 .nav-link-text {
@@ -63,11 +63,13 @@ p {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
+  padding-right: 3px;
+ 
 }
 
 .nav-link-text:hover {
 
-  text-shadow: 1px 1px 6px steelblue
+  box-shadow: 1px 1px rgba(245, 245, 245, 0.45)
 }
 
 .site-title {

@@ -58,7 +58,7 @@ const IndexPage = ({
           <label>Achternaam</label>
           <input type="text" name="Achternaam" required={true} />
           
-          <label>e-mail</label>
+          <label>E-mail</label>
           <input type="email" name="E-mail" required={true} />
           
           <label>Onderwerp</label>
