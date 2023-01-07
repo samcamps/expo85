@@ -50,8 +50,10 @@ const IndexPage = ({
       <hr></hr>
 
       <section className={form}>
+        
         <h2 className={contact}>Laat ons een boodschap</h2>
-        <form name="contact" method="POST" data-netlify="true">
+
+        <form name="contactexpo" method="POST" data-netlify="true">
           <label>Voornaam</label>
           <input type="text" name="Voornaam" required={true} />
 
@@ -67,7 +69,8 @@ const IndexPage = ({
           <label>Boodschap</label>
           <textarea name="Boodschap" required={true}></textarea>
 
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="contactexpo" />
+
           <button type="submit">Verstuur</button>
         </form>
       </section>
