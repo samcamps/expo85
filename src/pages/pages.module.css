@@ -30,7 +30,6 @@
 }
 
 hr {
-
     margin-bottom: 3.45rem;
     background-color: whitesmoke
 }
@@ -39,7 +38,6 @@ hr {
     display: flex;
     justify-content: space-around;
     margin-bottom: 45px;
-
 }
 
 .art-tiles-overview {
@@ -66,7 +64,6 @@ hr {
     margin-left: 8px;
     font-size: 0.9rem;
     text-align: left;
-
 }
 
 .pictureContainer {
@@ -85,7 +82,7 @@ hr {
     margin-top: 0px;
 }
 
-.contact{
+.contact {
     text-align: center;
     text-transform: uppercase;
     font-weight: lighter;
@@ -94,8 +91,9 @@ hr {
 }
 
 .form {
-   text-align: center;
+    text-align: center;
 }
+
 .form label {
     display: block;
     margin-top: 6px;
@@ -105,30 +103,31 @@ hr {
 .form input,
 .form textarea {
     width: 35%;
-    padding: 4px;
+    padding: 5px;
     border: none;
     background-color: lightgrey;
-    color: black
+    color: black;
+    font-family: Optima, sans-serif
 }
 
 .form textarea {
     min-height: 100px;
-    width:35%;
-    font-family: Optima;
+    width: 35%;
+    font-family: Optima, sans-serif;
 }
 
 .form button {
     display: block;
     background-color: dimgrey;
     color: whitesmoke;
-    font-size: 0.74rem;
+    font-size: 0.77rem;
     border: 1px solid grey;
     border-radius: 4px;
     padding: 5px 10px;
     text-transform: uppercase;
-    margin:10px auto 40px
+    margin: 10px auto 40px
 }
 
 .form button:hover {
-    box-shadow: 1px 1px  rgba(245, 245, 245, 0.6)
+    box-shadow: 1px 1px rgba(245, 245, 245, 0.6)
 }

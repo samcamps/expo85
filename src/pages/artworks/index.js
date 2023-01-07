@@ -5,8 +5,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Artwork from '../../components/artwork'
 import {
   title,
-  featured,
-  artTiles,
   artTilesOverview,
   overviewHero
 } from '../pages.module.css'
@@ -58,7 +56,6 @@ const ArtworksPage = ({
 }
 
 export default ArtworksPage;
-
 
 export const query = graphql`
 query  {

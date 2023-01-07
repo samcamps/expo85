@@ -51,19 +51,19 @@ const IndexPage = ({
 
       <section className={form}>
         <h2 className={contact}>Laat ons een boodschap</h2>
-        <form  name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true">
           <label>Voornaam</label>
           <input type="text" name="Voornaam" required={true} />
 
           <label>Achternaam</label>
           <input type="text" name="Achternaam" required={true} />
-          
+
           <label>E-mail</label>
           <input type="email" name="E-mail" required={true} />
-          
+
           <label>Onderwerp</label>
           <input type="text" name="Onderwerp" required={true} />
-          
+
           <label>Boodschap</label>
           <textarea name="Boodschap" required={true}></textarea>
 

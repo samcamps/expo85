@@ -38,7 +38,7 @@ const ArtworkPage = ({
 
                 <div className={pictureContainer}>
                     <GatsbyImage className={artHero} image={image} alt={el.picture.altText} />
-                  
+
                 </div>
                 <div className={properties}>
                     <p>Afmetingen: {el.dimensions}</p>
@@ -56,13 +56,10 @@ const ArtworkPage = ({
                     </div>
                 </div>
                 <hr></hr>
-
             </div>
         </Layout>
     )
 }
-
-
 
 export default ArtworkPage
 
