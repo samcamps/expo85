@@ -82,7 +82,7 @@ wpArtwork(id: {eq: $id}) {
         altText
         localFile {
           childImageSharp {
-            gatsbyImageData(placeholder: DOMINANT_COLOR)
+            gatsbyImageData(placeholder: DOMINANT_COLOR, height:710)
           }
         }
       }
