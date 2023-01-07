@@ -96,7 +96,7 @@ hr {
 
 .form label {
     display: block;
-    margin-top: 6px;
+    margin-top: 7px;
     font-size: 0.9rem;
 }
 
@@ -107,13 +107,12 @@ hr {
     border: none;
     background-color: lightgrey;
     color: black;
-    font-family: Optima, sans-serif
+    font-family: Optima, sans-serif;
+    font-size:0.7rem
 }
 
 .form textarea {
     min-height: 100px;
-    width: 35%;
-    font-family: Optima, sans-serif;
 }
 
 .form button {
