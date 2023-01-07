@@ -7,7 +7,9 @@ import {
   title,
   featured,
   artTiles,
-  homeHero
+  homeHero,
+  contact,
+  form
 } from './pages.module.css'
 
 const IndexPage = ({
@@ -44,6 +46,30 @@ const IndexPage = ({
 
           })}
         </div>
+      </section>
+      <hr></hr>
+
+      <section className={form}>
+        <h2 className={contact}>Laat ons een boodschap</h2>
+        <form  name="contact" method="POST" data-netlify="true">
+          <label>Voornaam</label>
+          <input type="text" name="Voornaam" required={true} />
+
+          <label>Achternaam</label>
+          <input type="text" name="Achternaam" required={true} />
+          
+          <label>e-mail</label>
+          <input type="email" name="E-mail" required={true} />
+          
+          <label>Onderwerp</label>
+          <input type="text" name="Onderwerp" required={true} />
+          
+          <label>Boodschap</label>
+          <textarea name="Boodschap" required={true}></textarea>
+
+          <input type="hidden" name="form-name" value="contact" />
+          <button type="submit">Verstuur</button>
+        </form>
       </section>
       <hr></hr>
 

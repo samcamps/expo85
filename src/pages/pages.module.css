@@ -79,9 +79,55 @@ hr {
     max-width: 800px;
     width: auto;
     height: auto;
-
 }
 
 .artistName {
     margin-top: 0px;
+}
+
+.contact{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.32rem;
+    margin-bottom: 3rem;
+}
+
+.form {
+   text-align: center;
+}
+.form label {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.9rem;
+}
+
+.form input,
+.form textarea {
+    width: 35%;
+    padding: 4px;
+    border: none;
+    background-color: lightgrey;
+    color: black
+}
+
+.form textarea {
+    min-height: 110px;
+    width:35%
+}
+
+.form button {
+    display: block;
+    background-color: dimgrey;
+    color: whitesmoke;
+    font-size: 0.74rem;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    margin:10px auto 40px
+}
+
+.form button:hover {
+    box-shadow: 1px 1px  rgba(245, 245, 245, 0.6)
 }
